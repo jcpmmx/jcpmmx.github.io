@@ -1,0 +1,92 @@
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+div.container {
+    padding: 0;
+}
+
+header {
+    position: relative;
+    height: 333px;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+    background: transparent url('../img/bg.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+header h1 small {
+    display: block;
+    color: #ddd;
+}
+header a,
+header a:hover {
+    color: #fff;
+}
+header #text_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1em;
+    background: rgba(33,33,33, 0.5);
+}
+header #bg_info {
+    position: absolute;
+    top: 0;
+    padding: 0.3em 1em;
+    background: rgba(33,33,33, 0.3);
+    font-size: 0.7em;
+}
+header #bg_info a {
+    color: #ccc;
+}
+
+footer {
+    padding-top: 3em;
+    margin-top: 3em;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+dl dt {
+    text-align: left !important;
+}
+
+blockquote {
+    margin: 0;
+}
+
+div.main_content > div {
+    padding: 0 1.5em 3em;
+    margin-bottom: 3em;
+    border-bottom: 1px solid #eee;
+}
+div.main_content > div:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+div.main_content > div h3 {
+    margin: 0 0 1.5em;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        padding: 3em 0;
+    }
+    header {
+        margin-bottom: 7em;
+    }
+    footer {
+        margin-top: 7em;
+    }
+}
