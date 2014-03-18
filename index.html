@@ -28,6 +28,27 @@
         </script>
     </head>
     <body>
+        <!-- Header when scrolling -->
+        <div id="header_when_scrolling">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 clearfix">
+                        <div class="pull-left">
+                            <h1>
+                                Juli&aacute;n P&eacute;rez <small class="hidden-xs">Software engineer and Entrepreneur</small>
+                            </h1>
+                        </div>
+                        <div class="pull-right">
+                            <p>
+                                <a href="https://dl.dropboxusercontent.com/u/74666409/JulianPerezCV.pdf" title="Get my CV">My CV</a>
+                                &nbsp;
+                                <a href="mailto:jcpmmx@gmail.com?subject=Hi Julián!" title="Get in touch">Get in touch</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -202,5 +223,27 @@
                 </div>
             </div>
         </div>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+            $.fn.isOnScreen = function() {
+                var win = $(window);
+                var viewport = {
+                    top : win.scrollTop(),
+                    left : win.scrollLeft()
+                };
+                viewport.right = viewport.left + win.width();
+                viewport.bottom = viewport.top + win.height();
+                var bounds = this.offset();
+                bounds.right = bounds.left + this.outerWidth();
+                bounds.bottom = bounds.top + this.outerHeight();
+                return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+            };
+            $(document).ready(function() {
+                $(window).bind('scroll', function() {
+                    if (!$('header').isOnScreen()) $('#header_when_scrolling').fadeIn();
+                    else $('#header_when_scrolling').fadeOut();
+                });
+            });
+        </script>
     </body>
 </html>
