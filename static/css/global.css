@@ -12,7 +12,7 @@ header {
     height: 333px;
     padding-bottom: 3em;
     margin-bottom: 3em;
-    background: transparent url('../img/bg.png') no-repeat center center;
+    background: #777 url('../img/bg.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
