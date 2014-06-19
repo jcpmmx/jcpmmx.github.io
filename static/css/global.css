@@ -2,6 +2,9 @@ a {
     color: #000;
     text-decoration: underline;
 }
+a:hover {
+    text-decoration: none;
+}
 
 div.container {
     padding: 0;
@@ -12,7 +15,7 @@ header {
     height: 333px;
     padding-bottom: 3em;
     margin-bottom: 3em;
-    background: #777 url('../img/bg.png') no-repeat center center;
+    background: #777 url('../img/bg.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,18 +38,19 @@ header #text_container {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-bottom: 1em;
-    background: rgba(33,33,33, 0.5);
+}
+header #text_container h1 small {
+    font-size: 0.5em;
 }
 header #bg_info {
     position: absolute;
     top: 0;
+    right: 0;
     padding: 0.3em 1em;
-    background: rgba(33,33,33, 0.3);
     font-size: 0.7em;
 }
 header #bg_info a {
-    color: #ccc;
+    color: #fff;
 }
 
 footer {
@@ -62,20 +66,7 @@ dl dt {
 
 blockquote {
     margin: 0;
-}
-
-div.main_content > div {
-    padding: 0 1.5em 3em;
-    margin-bottom: 3em;
-    border-bottom: 1px solid #eee;
-}
-div.main_content > div:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
-}
-div.main_content > div h3 {
-    margin: 0 0 1.5em;
+    border: none;
 }
 
 
@@ -86,32 +77,89 @@ div.main_content > div h3 {
     top: 0;
     width: 100%;
     height: 50px;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
+    background: #f7f7f7;
+    border-bottom: 3px solid #ccc;
 }
 #header_when_scrolling h1 {
     height: 50px;
-    padding: 0 0 0 15px;
     margin: 0;
     font-size: 21px;
     line-height: 50px;
 }
 #header_when_scrolling p {
     height: 50px;
-    padding: 0 15px 0 0;
+    margin: 0;
     font-size: 14px;
     line-height: 50px;
+}
+#header_when_scrolling .row_inner {
+    margin: 0 2.5em;
+}
+
+#main_content {
+    padding: 0 1em;
+}
+
+#main_content > .row {
+    padding: 0 1.5em 3em;
+    margin-bottom: 3em;
+    border-bottom: 1px solid #eee;
+}
+#main_content > .row:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+#main_content > .row h3 {
+    margin: 0 0 1.5em;
 }
 
 
 @media (min-width: 768px) {
-    body {
-        padding: 3em 0;
-    }
     header {
         margin-bottom: 7em;
     }
     footer {
         margin-top: 7em;
+    }
+    div.container {
+        width: 768px;
+    }
+    #header_when_scrolling {
+        padding: 0;
+    }
+    #header_when_scrolling .row_inner {
+        margin: 0 4.5em;
+    }
+    #main_content {
+        padding: 0 3em;
+    }
+    #main_content > .row {
+        border: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        -webkit-border-bottom-right-radius: 33px;
+        -webkit-border-bottom-left-radius: 33px;
+        -moz-border-radius-bottomright: 33px;
+        -moz-border-radius-bottomleft: 33px;
+        border-bottom-right-radius: 33px;
+        border-bottom-left-radius: 33px;
+    }
+    header #text_container {
+        -webkit-border-bottom-right-radius: 33px;
+        -webkit-border-bottom-left-radius: 33px;
+        -moz-border-radius-bottomright: 33px;
+        -moz-border-radius-bottomleft: 33px;
+        border-bottom-right-radius: 33px;
+        border-bottom-left-radius: 33px;
+    }
+    #header_when_scrolling .row_inner {
+        margin: 0 1.5em;
+    }
+    #main_content {
+        padding: 0;
     }
 }
