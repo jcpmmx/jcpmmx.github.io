@@ -13,9 +13,9 @@ div.container {
 header {
     position: relative;
     height: 333px;
-    padding-bottom: 3em;
+    padding: 2em 0 0;
     margin-bottom: 3em;
-    background: #777 url('../img/bg.jpg') no-repeat center center;
+    background: #333 url('../img/bg.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,34 +23,37 @@ header {
     text-align: center;
 }
 header h1 {
-    margin-bottom: 0.5em;
+    padding: 0;
+    margin: 0;
     color: #fff;
 }
 header h1 small {
     display: block;
     color: #ddd;
 }
+header ul {
+    margin: 1em 0 0;
+}
 header a,
 header a:hover {
     color: #fff;
 }
 header #text_container {
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    margin: 1em auto 0;
+    padding: 0.5em 0;
+    background: rgba(33,33,33, 0.7);
 }
 header #text_container h1 small {
     font-size: 0.5em;
 }
-header #bg_info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.3em 1em;
-    font-size: 0.7em;
-}
-header #bg_info a {
-    color: #fff;
+header #pic {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    background: #777 url('../img/jcpmmx.jpg') no-repeat center center;
+    background-size: 160px;
+    border: 1px solid #ccc;
 }
 
 footer {
@@ -119,6 +122,9 @@ blockquote {
     header {
         margin-bottom: 7em;
     }
+    header #text_container {
+        width: 50%;
+    }
     footer {
         margin-top: 7em;
     }
@@ -140,22 +146,6 @@ blockquote {
 }
 
 @media (min-width: 1024px) {
-    header {
-        -webkit-border-bottom-right-radius: 33px;
-        -webkit-border-bottom-left-radius: 33px;
-        -moz-border-radius-bottomright: 33px;
-        -moz-border-radius-bottomleft: 33px;
-        border-bottom-right-radius: 33px;
-        border-bottom-left-radius: 33px;
-    }
-    header #text_container {
-        -webkit-border-bottom-right-radius: 33px;
-        -webkit-border-bottom-left-radius: 33px;
-        -moz-border-radius-bottomright: 33px;
-        -moz-border-radius-bottomleft: 33px;
-        border-bottom-right-radius: 33px;
-        border-bottom-left-radius: 33px;
-    }
     #header_when_scrolling .row_inner {
         margin: 0 1.5em;
     }
