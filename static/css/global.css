@@ -10,44 +10,59 @@ a:hover {
 
 header,
 footer {
-    padding: 2em 0;
+    padding: 1em 0;
     text-align: center;
-    background: #fff;
+}
+header {
+    background: #777 url('../img/bg.jpg') no-repeat center center;
 }
 header h1 {
     width: 100%;
-    margin: 0 auto;
-    padding: 0.5em 0 0;
+    margin: 0.3em auto;
+    padding: 0.3em 0;
+    background: rgba(255,255,255, 0.87);
 }
 header h1 small {
     font-size: 0.5em;
     display: block;
 }
 header #pic {
-    width: 160px;
-    height: 160px;
+    width: 240px;
+    height: 240px;
     margin: 0 auto;
     background: #777 url('../img/jcpmmx.jpg') no-repeat center center;
-    background-size: 160px;
+    background-size: 240px;
     border: 1px solid #eee;
 }
 
-footer p:last-child {
+footer {
+    padding: 0;
+}
+footer p {
     margin: 0;
 }
 
 
 .container {
     margin: 0 1em;
-    background: #ddd;
 }
 .container .row > div {
     padding: 1.5em 1.5em 1em;
     margin: 1em 0 0;
     background: #fff;
+    border: 1px solid #ddd;
 }
 .container .row > div:first-child {
+    padding: 0;
     margin: 0;
+    border: none;
+}
+.container .row > div:last-child {
+    border-bottom: none;
+}
+.container .row > div > h3 {
+    margin: 0 0 1em;
+    font-size: 1.3em;
 }
 
 
