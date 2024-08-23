@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background: #fff;
 }
 
 a,
@@ -13,14 +13,10 @@ footer {
     padding: 1em 0;
     text-align: center;
 }
-header {
-    background: #777 url('../img/bg.jpg') no-repeat center center;
-}
 header h1 {
     width: 100%;
     margin: 0.3em auto;
     padding: 0.3em 0;
-    background: rgba(255,255,255, 0.87);
 }
 header h1 small {
     font-size: 0.5em;
@@ -47,22 +43,38 @@ footer p {
     margin: 0 1em;
 }
 .container .row > div {
-    padding: 1.5em 1.5em 1em;
-    margin: 1em 0 0;
-    background: #fff;
-    border: 1px solid #ddd;
+    padding: 3em 1.5em;
+    margin: 0;
+}
+.container .row > div:first-child,
+.container .row > div:last-child {
+    text-align: center;
+}
+.container .row > div:first-child:after, 
+.container .row > div:last-child:after {
+    content: "";
+    background: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+    width: 34%;
+    height: 1px;
 }
 .container .row > div:first-child {
-    padding: 0;
-    margin: 0;
-    border: none;
+    padding-bottom: 5em;
+    margin-bottom: 2em;
 }
 .container .row > div:last-child {
-    border-bottom: none;
+    padding-top: 5em;
+    margin-top: 2em;
+    color: #777;
+}
+.container .row > div:last-child:after {
+    top: 0;
 }
 .container .row > div > h3 {
     margin: 0 0 1em;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 
